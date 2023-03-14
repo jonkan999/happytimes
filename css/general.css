@@ -1,0 +1,72 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* font-size: 10px; */
+  /* 10 / 16 = 0,625 percentage of users browser font-size setting */
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  /*  width: 100%;
+  max-width: 960px; */
+  width: 100%;
+  font-family: "Golos", sans-serif;
+  line-height: 1;
+  font-weight: 200;
+  color: #1c1c1b;
+  background-color: white;
+}
+
+:root {
+  --highlight-color: #013cd2;
+
+  --main-text-color: #1c1c1b;
+  --white-text-color: #ebebeb;
+  --tint-color: #809ee9;
+}
+
+/* *:focus {
+  outline: none;
+
+  box-shadow: 0 0 0 0.2rem #606266;
+  border: solid #606266 2px;
+  /* border-radius: 2px; 
+} */
+
+.secondary-header {
+  font-size: 5rem;
+  font-weight: 200;
+}
+.margin-bot--default {
+  margin-bottom: 5rem;
+}
+.margin-bot--small {
+  margin-bottom: 2rem;
+}
+
+.margin-bot--tiny {
+  margin-bottom: 0.5rem;
+}
+
+.section-margin {
+  margin-bot: 10rem;
+}
+
+.grid {
+  display: grid;
+  column-gap: 6.4rem;
+  row-gap: 9.6rem;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
+}

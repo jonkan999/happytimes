@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+    <!-- Slick -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"
+    ></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script defer src="/js/mobile-nav.js"></script>
+    <script defer src="/js/script.js"></script>
+    <script defer src="/js/topOnRefresh.js"></script>
+    <!-- SÄTT PÅ SEN -->
+    <script defer src="/js/script.js"></script>
+    <script type="module" defer src="/js/clickedCase.js"></script>
+    <!-- <script type="module" defer src="/js/carousel.js"></script> -->
+
+    <link rel="stylesheet" href="/css/general.css" />
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/queries.css" />
+  </head>
+  <body>
+    <header>
+      <div class="background-image parallax"></div>
+      <img class="foreground-image" src="statue.png" alt="" />
+      <div class="header-container">
+        <div class="header-bar">
+          <nav class="main-nav">
+            <ul class="main-nav-list">
+              <li>
+                <a class="main-nav-link" href="#om-oss" id="navAbout"
+                  >Om Happy Times</a
+                >
+              </li>
+              <li>
+                <a class="main-nav-link" href="#kundcase" id="navHowItWorks"
+                  >Produktioner</a
+                >
+              </li>
+              <li>
+                <a class="main-nav-link" href="#kontakt" id="navContact"
+                  >Kontakt</a
+                >
+              </li>
+              <li>
+                <a class="main-nav-link" href="#partners" id="navPartners"
+                  >Samarbetspartners</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <button class="btn-mobile-nav">
+            <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+            <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+          </button>
+        </div>
+        <div class="double-line"></div>
+      </div>
+      <a href="/index.html" class="logo-container">
+        <div class="logo-box">
+          <svg
+            width="186"
+            height="186"
+            viewBox="0 0 186 186"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M93 156V86" stroke="#1C1C1B" stroke-width="18" />
+            <path d="M54 86L131 86" stroke="#1C1C1B" stroke-width="18" />
+            <path d="M54 126V48" stroke="#1C1C1B" stroke-width="18" />
+            <path d="M131 126V48" stroke="#1C1C1B" stroke-width="18" />
+            <circle cx="93" cy="93" r="84" stroke="#1C1C1B" stroke-width="18" />
+          </svg>
+        </div>
+      </a>
+
+      <h1 class="main-header bottom">Happy Times</h1>
+    </header>
+    <div class="double-line-bottom"></div>
+
+    <main>
+      <section class="section-about section-margin" id="om-oss">
+        <div class="container">
+          <h2 id="aboutHeader" class="secondary-header margin-bot--default">
+            Om oss
+          </h2>
+          <p id="aboutText_1" class="about-text margin-bot--small">
+            Happy Times är produktionsbolaget som specialiserat sig på att skapa
+            storskaliga evenemang. Vi hanterar alla aspekter av den kreativa
+            processen, från konceptutveckling till den operativa
+            produktionsledningen och utförandet.
+          </p>
+          <p id="aboutText_2" class="about-text">
+            Vi är personerna bakom många av de progressiva
+            evenamangssatsningarna i Stockholm senaste åren och har sedan 2005
+            jobbat med flera av Sveriges största festivaler, klubbar och
+            arrangörer.
+          </p>
+        </div>
+      </section>
+      <section class="section-cases section-margin" id="kundcase">
+        <div class="container">
+          <h2 id="caseHeader" class="secondary-header margin-bot--default">
+            Produktioner
+          </h2>
+
+          <div class="case-wrapper case-wrapper--upper-4">
+            <div class="case-wrapper--inner-top-left">
+              <div id="norrbro" class="customer-case-card">
+                <div class="carousel-placeholder"></div>
+                <div class="project-image">
+                  <img src="/images/norrbro-main.jpg" alt="" />
+                </div>
+
+                <div class="customer-case-text-box">
+                  <div class="customer-case-titel-year-box">
+                    <h3 class="customer-case-titel">
+                      Norrbro <br />
+                      Marknad
+                    </h3>
+                    <p class="customer-case-year">2022</p>
+                  </div>
+                  <p class="customer-case-paragraph hidden-paragraph">
+                    Norrbro Marknad är ett av våra hjärtebarn. Varje år samlas
+                    15000 personer under kulturfestivaldagarna för att äta,
+                    mingla och dansa tillsammans. Vi har de senaste 4 åren varit
+                    ansvariga för skapandet och utförandet av mat- och
+                    dryckeskoncepten på festivalen. Och har genom åren
+                    samarbetat med flera av Sveriges coolaste food trucks och
+                    dryckesleverantörer, för att skapa en glödande atmosfär mitt
+                    i hjärtat av stan.
+                  </p>
+                </div>
+              </div>
+              <div id="nobelmarknad" class="customer-case-card">
+                <div class="carousel-placeholder"></div>
+                <div class="project-image">
+                  <img src="/images/nobelmarknad-main.jpg" alt="" />
+                </div>
+                <div class="customer-case-text-box">
+                  <div class="customer-case-titel-year-box">
+                    <h3 class="customer-case-titel">
+                      Nobelberget <br />
+                      Nattmarknad
+                    </h3>
+                    <p class="customer-case-year">2020</p>
+                  </div>
+
+                  <p class="customer-case-paragraph hidden-paragraph">
+                    Nattmarknad och folkfest på Nobelberget som vi har drivit
+                    tillsammans med Atrium Ljungberg sedan starten 2018. En av
+                    Stockholms största loppmarknader, men också
+                    utställningsplats för lokalt hantverk och mat och
+                    musikfestival.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="case-wrapper--inner-top-right">
+              <div id="lolla" class="customer-case-card">
+                <div class="carousel-placeholder"></div>
+                <div class="project-image">
+                  <img src="/images/lolla-main.jpg" alt="" />
+                </div>
+
+                <div class="customer-case-text-box">
+                  <div class="customer-case-titel-year-box">
+                    <h3 class="customer-case-titel">Lollapalooza</h3>
+                    <p class="customer-case-year">2020</p>
+                  </div>
+                  <p class="customer-case-paragraph hidden-paragraph">
+                    Norrbro Marknad är ett av våra hjärtebarn. Varje år samlas
+                    15000 personer under kulturfestivaldagarna för att äta,
+                    mingla och dansa tillsammans. Vi har de senaste 4 åren varit
+                    ansvariga för skapandet och utförandet av mat- och
+                    dryckeskoncepten på festivalen. Och har genom åren
+                    samarbetat med flera av Sveriges coolaste food trucks och
+                    dryckesleverantörer, för att skapa en glödande atmosfär mitt
+                    i hjärtat av stan.
+                  </p>
+                </div>
+              </div>
+
+              <div id="rosendal" class="customer-case-card">
+                <div class="carousel-placeholder"></div>
+                <div class="project-image">
+                  <img src="/images/rosendal-main.jpg" alt="" />
+                </div>
+                <div class="customer-case-text-box">
+                  <div class="customer-case-titel-year-box">
+                    <h3 class="customer-case-titel">
+                      Rosendal <br />
+                      Garden Party
+                    </h3>
+                    <p class="customer-case-year">2022</p>
+                  </div>
+
+                  <p class="customer-case-paragraph hidden-paragraph">
+                    Norrbro Marknad är ett av våra hjärtebarn. Varje år samlas
+                    15000 personer under kulturfestivaldagarna för att äta,
+                    mingla och dansa tillsammans. Vi har de senaste 4 åren varit
+                    ansvariga för skapandet och utförandet av mat- och
+                    dryckeskoncepten på festivalen. Och har genom åren
+                    samarbetat med flera av Sveriges coolaste food trucks och
+                    dryckesleverantörer, för att skapa en glödande atmosfär mitt
+                    i hjärtat av stan.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="case-wrapper case-wrapper--lower-3">
+            <div id="wow" class="customer-case-card">
+              <div class="carousel-placeholder"></div>
+              <div class="project-image">
+                <img src="/images/wow-main.jpg" alt="" />
+              </div>
+              <div class="customer-case-text-box">
+                <div class="customer-case-titel-year-box">
+                  <h3 class="customer-case-titel">
+                    Way out <br />
+                    West
+                  </h3>
+                  <p class="customer-case-year">2019</p>
+                </div>
+
+                <p class="customer-case-paragraph hidden-paragraph">
+                  Vi har under flera år varit involverade i Way out West mat och
+                  dryckesproductioner. 2019 ansvarade vi över
+                  Redbullaktiveringen Oasen och den större matsektionen på
+                  festivalen.
+                </p>
+              </div>
+            </div>
+            <div class="case-wrapper--bottom">
+              <div id="vi-som-älskar-90" class="customer-case-card">
+                <div class="carousel-placeholder"></div>
+                <div class="project-image">
+                  <img src="/images/vi-som-älskar-90-main.jpg" alt="" />
+                </div>
+                <div class="customer-case-text-box">
+                  <div class="customer-case-titel-year-box">
+                    <h3 class="customer-case-titel">
+                      Vi som älskar <br />
+                      90-talet
+                    </h3>
+                    <p class="customer-case-year">2019</p>
+                  </div>
+
+                  <p class="customer-case-paragraph hidden-paragraph">
+                    2019 skötte vi projektledningen av Vi som älskar
+                    nittiotalets, matsektioner.
+                  </p>
+                </div>
+              </div>
+
+              <div id="epidemic-sound" class="customer-case-card">
+                <div class="carousel-placeholder"></div>
+                <div class="project-image">
+                  <img src="/images/epidemic-sound-main.jpg" alt="" />
+                </div>
+                <div class="customer-case-text-box">
+                  <div class="customer-case-text-box">
+                    <div class="customer-case-titel-year-box">
+                      <h3 class="customer-case-titel">
+                        Epidemic Sound <br />
+                        Spring Bash
+                      </h3>
+                      <p class="customer-case-year">2020</p>
+                    </div>
+
+                    <p class="customer-case-paragraph hidden-paragraph">
+                      Epidemic Sounds årliga vårfest, Spring bash. Vi har sedan
+                      starten 2019 varit partner leverantör för festivalen i
+                      Nacka Strand.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-contact section-margin" id="kontakt">
+        <div class="container">
+          <h2 id="contactHeader" class="secondary-header margin-bot--default">
+            Kontakta oss
+          </h2>
+          <div class="contact-card-box">
+            <div class="contact-card">
+              <h3 class="name">Martin Lagerberg</h3>
+              <p class="job-title">VD</p>
+              <a href="tel:+46 70 830 31 01">+46 70 830 31 01</a> <br />
+              <a href="mailto:martin@happytimes.se">martin@happytimes.se</a>
+            </div>
+            <div class="contact-card">
+              <h3 class="name">Gabriella Dahlbäck</h3>
+              <p class="job-title">Operativ Chef</p>
+
+              <a href="tel:+46 73 142 52 42">+46 73 142 52 42</a> <br />
+              <a href="mailto:gabriella@happytimes.se"
+                >gabriella@happytimes.se</a
+              >
+            </div>
+          </div>
+          <div class="visit-adress">
+            <h3 class="post-adress-header">Besöksadress:</h3>
+            <p class="post-adress">Lövholmsbrinken 1, 117 43 Stockholm</p>
+          </div>
+          <div class="some-box">
+            <a
+              class="some-logo fb-logo"
+              target="_blank"
+              href="https://www.facebook.com/happytimessthlm/"
+            >
+              <svg
+                width="220"
+                height="231"
+                viewBox="0 0 220 231"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M109.8 0C49.3 0 0 51.7 0 115.1C0 178.5 49.3 230.2 109.8 230.2C170.4 230.2 219.6 178.5 219.6 115.1C219.6 51.7 170.4 0 109.8 0ZM109.8 11.6C164 11.6 208 58 208 115.1C208 116.1 208 117.1 208 118.1C206.4 95.1 187 80.9 158 80.9C142.5 80.9 127.7 86.8 120.4 96.2V51.6H119H105.9H62C51.6 51.6 46.2 57.2 46.2 68V98H13C20.7 49.1 61.2 11.6 109.8 11.6ZM193.6 121.3C193.6 138.3 180 149.8 159.4 149.8H156.6C134.8 149.8 120.4 138.3 120.4 121.3C120.4 104.3 134.8 92.8 156.6 92.8H159.4C179.9 92.8 193.6 104.2 193.6 121.3ZM109.8 218.7C55.6 218.7 11.6 172.3 11.6 115.2C11.6 113.5 11.6 111.7 11.7 110H46.2V160H60.6V110H88.8V98.1H60.6V70C60.6 65.4 62.5 63.7 67.1 63.7H106V160H120.4V147.3C129.4 157.7 144.7 161.5 158 161.5C183.9 161.5 201.6 151.1 206.6 132.8C198.6 181.5 158.3 218.7 109.8 218.7Z"
+                  fill="#1C1C1B"
+                />
+              </svg>
+            </a>
+            <a
+              class="some-logo insta-logo"
+              target="_blank"
+              href="https://www.instagram.com/happytimessthlm/"
+            >
+              <svg
+                width="221"
+                height="231"
+                viewBox="0 0 221 231"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_218_2)">
+                  <path
+                    d="M110.6 0.199951C50 0.199951 0.700012 51.9 0.700012 115.4C0.700012 178.9 50 230.5 110.6 230.5C171.2 230.5 220.4 178.8 220.4 115.4C220.4 52 171.1 0.199951 110.6 0.199951ZM110.6 218.9C56.4 218.9 12.4 172.5 12.4 115.4C12.4 58.3 56.5 11.9 110.6 11.9C164.8 11.9 208.8 58.3 208.8 115.4C208.8 172.5 164.7 218.9 110.6 218.9Z"
+                    fill="#1C1C1B"
+                  />
+                  <path
+                    d="M140.1 39.1H81C56.7 39.1 37 58.8 37 83.1V142.1C37 166.4 56.7 186.1 81 186.1H140C164.3 186.1 184 166.4 184 142.1V83.1C184.1 58.8 164.4 39.1 140.1 39.1ZM172.5 142.1C172.5 160 158 174.5 140.1 174.5H81C63.1 174.5 48.6 160 48.6 142.1V83.1C48.6 65.2 63.1 50.7 81 50.7H140C157.9 50.7 172.4 65.2 172.4 83.1V142.1H172.5Z"
+                    fill="#1C1C1B"
+                  />
+                  <path
+                    d="M110.6 81.6C89.3 81.6 71.9 99 71.9 120.3C71.9 141.6 89.3 159 110.6 159C131.9 159 149.3 141.6 149.3 120.3C149.3 99 131.9 81.6 110.6 81.6ZM110.6 147.4C95.7 147.4 83.5 135.2 83.5 120.3C83.5 105.4 95.7 93.2 110.6 93.2C125.5 93.2 137.7 105.4 137.7 120.3C137.7 135.2 125.5 147.4 110.6 147.4Z"
+                    fill="#1C1C1B"
+                  />
+                  <path
+                    d="M146.5 81.6999C151.857 81.6999 156.2 77.3571 156.2 71.9999C156.2 66.6428 151.857 62.2999 146.5 62.2999C141.143 62.2999 136.8 66.6428 136.8 71.9999C136.8 77.3571 141.143 81.6999 146.5 81.6999Z"
+                    fill="#1C1C1B"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_218_2">
+                    <rect width="220.3" height="230.2" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="section-contact section-margin" id="partners">
+        <div class="container">
+          <h2 id="partnersHeader" class="secondary-header margin-bot--default">
+            Samarbetspartners
+          </h2>
+          <div class="grid grid--5-cols partner-grid">
+            <a class="partner-container">
+              <img
+                class="partner-container-image"
+                src="/images/partner-icon/luger.webp"
+                alt="Luger Logo"
+              />
+            </a>
+            <a class="partner-container">
+              <img
+                src="/images/partner-icon/stockholmsstad.jpg"
+                alt="stockholmsstad Logo"
+              />
+            </a>
+            <a class="partner-container">
+              <img
+                src="/images/partner-icon/atriumljungberg.webp"
+                alt="stockholmsstad Logo"
+              />
+            </a>
+            <a class="partner-container">
+              <img
+                src="/images/partner-icon/nobelberget.webp"
+                alt="stockholmsstad Logo"
+              />
+            </a>
+            <a class="partner-container">
+              <img
+                src="/images/partner-icon/absolut.webp"
+                alt="stockholmsstad Logo"
+              />
+            </a>
+            <a class="partner-container">
+              <img
+                src="/images/partner-icon/playstation.webp"
+                alt="stockholmsstad Logo"
+              />
+            </a>
+            <a class="partner-container">
+              <img
+                src="/images/partner-icon/livenation.webp"
+                alt="stockholmsstad Logo"
+              />
+            </a>
+            <a class="partner-container">
+              <img
+                src="/images/partner-icon/carlsberg.webp"
+                alt="stockholmsstad Logo"
+              />
+            </a>
+            <a class="partner-container">
+              <img
+                src="/images/partner-icon/galatea.webp"
+                alt="stockholmsstad Logo"
+              />
+            </a>
+            <a
+              class="partner-container"
+              href="https://fargfabriken.se/sv/"
+              target="_blank"
+            >
+              <img
+                src="/images/partner-icon/fargfabriken.webp"
+                alt="stockholmsstad Logo"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

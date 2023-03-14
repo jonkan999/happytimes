@@ -1,0 +1,395 @@
+/* rem and em do NOT depend on html font-size in media queries! Instead, 1rem = 1em = 16px */
+
+@media (max-width: 94em) {
+}
+
+/**************************/
+/* BELOW 1720px (category grid breaks) */
+/**************************/
+@media (max-width: 108em) {
+  #aboutHeader {
+    font-size: 4rem;
+  }
+  #aboutText_1 {
+    font-size: 2.3rem;
+    max-width: 90rem;
+  }
+  #aboutText_2 {
+    font-size: 2.3rem;
+    max-width: 90rem;
+  }
+}
+/**************************/
+/* BELOW 1344px (Smaller desktops) */
+/**************************/
+
+@media (max-width: 84em) {
+  .foreground-image {
+    width: 40rem;
+  }
+  .container {
+    max-width: 91rem;
+    margin: 0 auto;
+    padding: 0 2.24rem;
+  }
+
+  .case-wrapper--upper-4 {
+    gap: 2.1rem;
+  }
+
+  .case-wrapper--inner-top-left {
+    width: 50.652rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .case-wrapper--inner-top-right {
+    width: 33.768rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+  .case-wrapper--lower-3 {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    align-content: center;
+    justify-content: center;
+  }
+  #norrbro {
+    width: 50.652rem;
+    height: 50rem;
+  }
+
+  #nobelmarknad {
+    width: 50.652rem;
+    height: 50rem;
+  }
+
+  #lolla {
+    width: 33.768rem;
+    height: 35rem;
+  }
+
+  #rosendal {
+    width: 33.768rem;
+    height: 66.5rem;
+  }
+
+  #wow {
+    width: 86.52rem;
+    height: 60rem;
+    grid-row: 5/8;
+    grid-column: 1/-1;
+  }
+  #vi-som-älskar-90 {
+    width: 42.21rem;
+    height: 30rem;
+    grid-row: 8/9;
+    grid-column: 1/4;
+  }
+  #epidemic-sound {
+    width: 42.21rem;
+    height: 30rem;
+    grid-row: 8/9;
+    grid-column: 3/-1;
+  }
+
+  .customer-case-card.clicked {
+    width: 100rem !important;
+    height: 60rem !important;
+  }
+
+  .customer-case-card.clicked .carousel-placeholder {
+    position: relative;
+    width: 100rem;
+  }
+  .carousel img {
+    max-width: 100rem;
+    max-height: 60rem;
+    object-fit: cover;
+  }
+
+  .partner-container {
+    width: 12.32rem;
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .partner-grid {
+    column-gap: 2rem;
+    row-gap: 2rem;
+  }
+}
+
+/**************************/
+/* BELOW 1200px (Landscape Tablets) */
+/**************************/
+@media (max-width: 75em) {
+  html {
+    /* 9px / 16px  */
+    font-size: 56.25%;
+  }
+
+  .header-container {
+    max-width: 100%;
+  }
+}
+
+/**************************/
+/* BELOW 944px (Tablets) */
+/**************************/
+
+@media (max-width: 59em) {
+  html {
+    /* 8px / 16px = 0.5 = 50% */
+    font-size: 50%;
+  }
+
+  /* MOBILE NAVIGATION */
+  .btn-mobile-nav {
+    display: block;
+    z-index: 1;
+  }
+
+  /*   .hero-brand-box--closed {
+    display: none; 
+  } */
+
+  .main-nav {
+    background-color: rgba(255, 255, 255, 0.97);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /* z-index: -1; */
+    /* 		transform: translateX(100%);
+		-webkit-transform: translateX(100%); */
+
+    display: none;
+
+    /* Hide navigation */
+    /* Allows NO transitions at all */
+    /* display: none; */
+
+    /* 1) Hide it visually */
+    opacity: 0;
+
+    /* 2) Make it unaccessible to mouse and keyboard */
+    pointer-events: none;
+
+    /* 3) Hide it from screen readers */
+    visibility: hidden;
+    overflow: hidden;
+  }
+
+  .nav-open .main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0%);
+    animation: slideIn ease 0.5s;
+    -webkit-animation: slideIn ease 0.5s;
+    -moz-animation: slideIn ease 0.5s;
+    -o-animation: slideIn ease 0.5s;
+    -ms-animation: slideIn ease 0.5s;
+    z-index: 1;
+  }
+
+  @keyframes slideIn {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+  .nav-close .main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(100%);
+    animation: slideOut ease 0.5s;
+    -webkit-animation: slideOut ease 0.5s;
+    -moz-animation: slideOut ease 0.5s;
+    -o-animation: slideOut ease 0.5s;
+    -ms-animation: slideOut ease 0.5s;
+    z-index: 1;
+  }
+
+  @keyframes slideOut {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4.8rem;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 2.8rem;
+    color: var(--highlight-color);
+    font-weight: 600;
+  }
+}
+
+/**************************/
+/* BELOW 704px (Smaller tablets) */
+/**************************/
+
+@media (max-width: 44em) {
+  .main-header {
+    font-size: 6rem;
+  }
+  .foreground-image {
+    width: 30rem;
+  }
+  .container {
+    max-width: 63.7rem;
+    margin: 0 auto;
+    padding: 0 1.568rem;
+  }
+
+  .case-wrapper--upper-4 {
+    gap: 1.47rem;
+  }
+
+  .case-wrapper--inner-top-left {
+    width: 35.4564rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.49rem;
+  }
+
+  .case-wrapper--inner-top-right {
+    width: 23.6376rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.49rem;
+  }
+  .case-wrapper--lower-3 {
+    display: flex;
+    flex-direction: column;
+    gap: 0.49rem;
+    align-content: center;
+    justify-content: center;
+  }
+  #norrbro {
+    width: 35.4564rem;
+    height: 40rem;
+  }
+
+  #nobelmarknad {
+    width: 35.4564rem;
+    height: 40rem;
+  }
+
+  #lolla {
+    width: 23.6376rem;
+    height: 27rem;
+  }
+
+  #rosendal {
+    width: 23.6376rem;
+    height: 54.4rem;
+  }
+
+  #wow {
+    width: 60.564rem;
+    height: 47rem;
+    grid-row: 5/8;
+    grid-column: 1/-1;
+  }
+  #vi-som-älskar-90 {
+    width: 29.547rem;
+    height: 23rem;
+    grid-row: 8/9;
+    grid-column: 1/4;
+  }
+  #epidemic-sound {
+    width: 29.547rem;
+    height: 23rem;
+    grid-row: 8/9;
+    grid-column: 3/-1;
+  }
+
+  .customer-case-card.clicked {
+    width: 65rem !important;
+    height: 45rem !important;
+  }
+
+  .customer-case-card.clicked .carousel-placeholder {
+    position: relative;
+    width: 65rem;
+  }
+  .carousel img {
+    max-width: 65rem;
+    max-height: 45rem;
+    object-fit: cover;
+  }
+  .carousel .slick-dots li button::before {
+    content: "";
+    display: block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: white;
+    transition: all 0.3s ease;
+    opacity: 0.7;
+  }
+
+  .partner-container {
+    width: 8.32rem;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .partner-grid {
+    column-gap: 2rem;
+    row-gap: 2rem;
+  }
+}
+
+/**************************/
+/* BELOW 544px (Phones) */
+/**************************/
+
+@media (max-width: 34em) {
+}
+
+/**************************/
+/* BELOW 430px ( new Phones) */
+/**************************/
+@media (max-width: 27em) {
+}
+
+@media (max-width: 1300px) and (min-width: 1000px) and (max-height: 600px) {
+}
