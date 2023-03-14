@@ -5,9 +5,13 @@ console.log(parallax[0]);
 // Parallax Effect for DIV 1
 window.addEventListener("scroll", function () {
   let offset = window.pageYOffset;
-  console.log(-15 + offset * 0.115);
-  parallax.style.backgroundPositionY = -15 + offset * 0.115 + "vh";
-  // DIV 1 background will move slower than other elements on scroll.
+  /* console.log(-15 + offset * 0.115); */
+  if (window.matchMedia("(max-width: 944px)").matches) {
+    console.log("Media query matched on load!");
+    parallax.style.backgroundPositionY = 0 + offset * 0.115 + "vh";
+  } else {
+    parallax.style.backgroundPositionY = -15 + offset * 0.115 + "vh";
+  }
 });
 
 // Get the border and image elements
