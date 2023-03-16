@@ -54,7 +54,7 @@ window.addEventListener("scroll", function () {
       const distance = borderRect.bottom - headerRect.top;
 
       // Set the clip-path property to hide the part of the header behind the border
-      header.style.clipPath = `inset(${distance}px 0 0 0)`;
+      /* header.style.clipPath = `inset(${distance}px 0 0 0)`; */
     }
     console.log(headerBottomRect.height);
     console.log(headerBottomOverlap);
@@ -75,7 +75,7 @@ window.addEventListener("scroll", function () {
       }, 400);
       console.log("turn on");
       // Set the background image properties
-      border.style.backgroundImage = 'url("../background.jpg")';
+      /* border.style.backgroundImage = 'url("../background.jpg")'; */
       border.style.backgroundSize = "cover";
       border.style.backgroundRepeat = "no-repeat";
       border.style.backgroundPositionY = "88.845 vh";
@@ -84,7 +84,7 @@ window.addEventListener("scroll", function () {
       aboutHeader.style.opacity = "0";
       aboutText_1.style.display = "none";
       aboutText_2.style.display = "none";
-      border.style.backgroundImage = "none";
+      /*  border.style.backgroundImage = 'url("../background.jpg")'; */
       console.log("close");
     }
 
@@ -93,7 +93,7 @@ window.addEventListener("scroll", function () {
       const distance = borderRect.bottom - imageRect.top;
 
       // Set the clip-path property to hide the part of the image behind the border
-      image.style.clipPath = `inset(${distance}px 0 0 0)`;
+      /* image.style.clipPath = `inset(${distance}px 0 0 0)`; */
     }
   } else {
     // Reset the clip-path property if there is no overlap

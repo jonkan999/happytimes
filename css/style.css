@@ -28,6 +28,9 @@ header {
 }
 
 .header-container {
+  background-image: url(../background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
   position: fixed;
   width: 100%;
   z-index: 1;
