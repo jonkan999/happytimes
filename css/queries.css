@@ -595,6 +595,9 @@
     column-gap: 2rem;
     row-gap: 2rem;
   }
+  .grid--5-cols {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 @media (max-width: 1300px) and (min-width: 1000px) and (max-height: 600px) {
