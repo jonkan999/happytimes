@@ -503,7 +503,8 @@
 
   #rosendal {
     width: 100%;
-    height: 41.9rem;
+    height: 41rem;
+    margin-bottom: 1rem;
   }
 
   #wow {
