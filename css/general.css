@@ -15,9 +15,9 @@ body {
   /*  width: 100%;
   max-width: 960px; */
   width: 100%;
-  font-family: "Golos", sans-serif;
+  font-family: "Cutive Mono", sans-serif;
   line-height: 1;
-  font-weight: 200;
+  font-weight: 500;
   color: #1c1c1b;
   background-color: white;
 }
@@ -40,7 +40,7 @@ body {
 
 .secondary-header {
   font-size: 5rem;
-  font-weight: 200;
+  font-weight: 600;
 }
 .margin-bot--default {
   margin-bottom: 5rem;

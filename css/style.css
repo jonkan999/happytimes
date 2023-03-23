@@ -82,7 +82,7 @@ header {
   text-decoration: none;
   padding: 1.2rem 0 1.2rem 0;
   color: var(--white-text-color);
-  font-weight: 200;
+  font-weight: 500;
   font-size: 2.2rem; /* 2.2 */
   transition: all 0.2s;
 }
@@ -128,9 +128,8 @@ header {
   /* font-family: "Cutive Mono", cursive; */
   /* text-transform: uppercase; */
   font-size: 8rem;
-  font-weight: 100;
   color: #333;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .bottom {
@@ -173,7 +172,7 @@ section {
   animation: slide-up 0.5s forwards;
   line-height: 1.25;
   font-size: 2.6rem; /* 2.6rem */
-  font-weight: 200;
+  font-weight: 500;
   z-index: 0;
 }
 
@@ -526,7 +525,7 @@ section {
 }
 
 .contact-card p.job-title {
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 1.3rem;
 }
