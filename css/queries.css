@@ -298,6 +298,15 @@
     margin: 0 auto;
     padding: 0 1.568rem;
   }
+  .customer-case-text-box {
+    padding: 0;
+  }
+  .customer-case-titel-year-box {
+    padding: 0.4rem 0.4rem 0.4rem 0.4rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
 
   .case-wrapper--upper-4 {
     gap: 1.47rem;
@@ -421,6 +430,9 @@
     left: 40%;
     font-size: 5rem;
   }
+  .secondary-header {
+    font-size: 3.5rem;
+  }
 }
 
 /**************************/
@@ -535,9 +547,9 @@
     position: relative;
     max-width: 51.33rem;
   }
-  .customer-case-text-box {
+  /*   .customer-case-text-box {
     padding-left: 1rem;
-  }
+  } */
   .carousel img {
     max-width: 51.33rem;
     max-height: 40rem;
