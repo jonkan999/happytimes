@@ -453,11 +453,11 @@
 
   #aboutText_1 {
     font-size: 1.8rem;
-    width: 43rem;
+    width: auto;
   }
   #aboutText_2 {
     font-size: 1.8rem;
-    width: 47rem;
+    width: auto;
   }
 
   .case-wrapper--upper-4 {
