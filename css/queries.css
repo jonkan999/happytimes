@@ -440,9 +440,10 @@
 /**************************/
 @media (max-width: 29em) {
   .main-header {
-    left: 39%;
+    left: 35%;
     font-size: 4.5rem;
-    bottom: 12%;
+    bottom: 17%;
+    letter-spacing: -0.15rem;
   }
 
   .container {
