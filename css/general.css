@@ -11,11 +11,23 @@ html {
   scroll-behavior: smooth;
 }
 
+@font-face {
+  font-family: "Brown Regular";
+  src: url("/fonts/Brown-Regular.eot");
+  src: url("/fonts/Brown-Regular.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/Brown-Regular.woff2") format("woff2"),
+    url("/fonts/Brown-Regular.woff") format("woff"),
+    url("/fonts/Brown-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   /*  width: 100%;
   max-width: 960px; */
   width: 100%;
-  font-family: "Cutive Mono", sans-serif;
+  /* font-family: "Cutive Mono", sans-serif; */
+  font-family: "Brown Regular", sans-serif;
   line-height: 1;
   font-weight: 500;
   color: #1c1c1b;
