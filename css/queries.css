@@ -70,6 +70,9 @@
   .case-wrapper--upper-4 {
     gap: 2.1rem;
   }
+  .case-wrapper--even-lower-4 {
+    gap: 2.1rem;
+  }
 
   .case-wrapper--inner-top-left {
     width: 50.652rem;
@@ -96,7 +99,15 @@
     height: 50rem;
   }
 
-  #nobelmarknad {
+  #nobelberget {
+    width: 50.652rem;
+    height: 50rem;
+  }
+  #hojden {
+    width: 50.652rem;
+    height: 50rem;
+  }
+  #popaganda {
     width: 50.652rem;
     height: 50rem;
   }
@@ -105,8 +116,16 @@
     width: 33.768rem;
     height: 35rem;
   }
+  #sow {
+    width: 33.768rem;
+    height: 35rem;
+  }
 
   #rosendal {
+    width: 33.768rem;
+    height: 66.5rem;
+  }
+  #midsummer {
     width: 33.768rem;
     height: 66.5rem;
   }
@@ -117,7 +136,7 @@
     grid-row: 5/8;
     grid-column: 1/-1;
   }
-  #vi-som-älskar-90 {
+  #vi-som {
     width: 42.21rem;
     height: 30rem;
     grid-row: 8/9;
@@ -311,6 +330,9 @@
   .case-wrapper--upper-4 {
     gap: 1.47rem;
   }
+  .case-wrapper--even-lower-4 {
+    gap: 1.47rem;
+  }
 
   .case-wrapper--inner-top-left {
     width: 35.4564rem;
@@ -337,7 +359,15 @@
     height: 40rem;
   }
 
-  #nobelmarknad {
+  #nobelberget {
+    width: 35.4564rem;
+    height: 40rem;
+  }
+  #hojden {
+    width: 35.4564rem;
+    height: 40rem;
+  }
+  #popaganda {
     width: 35.4564rem;
     height: 40rem;
   }
@@ -346,8 +376,16 @@
     width: 23.6376rem;
     height: 27rem;
   }
+  #sow {
+    width: 23.6376rem;
+    height: 27rem;
+  }
 
   #rosendal {
+    width: 23.6376rem;
+    height: 54.4rem;
+  }
+  #midsummer {
     width: 23.6376rem;
     height: 54.4rem;
   }
@@ -358,7 +396,7 @@
     grid-row: 5/8;
     grid-column: 1/-1;
   }
-  #vi-som-älskar-90 {
+  #vi-som {
     width: 29.547rem;
     height: 23rem;
     grid-row: 8/9;
@@ -465,6 +503,9 @@
   .case-wrapper--upper-4 {
     gap: 1.323rem;
   }
+  .case-wrapper--even-lower-4 {
+    gap: 1.323rem;
+  }
   .project-image {
     margin: 0;
   }
@@ -493,7 +534,15 @@
     height: 30rem;
   }
 
-  #nobelmarknad {
+  #nobelberget {
+    width: 100%;
+    height: 30rem;
+  }
+  #hojden {
+    width: 100%;
+    height: 30rem;
+  }
+  #popaganda {
     width: 100%;
     height: 30rem;
   }
@@ -502,8 +551,17 @@
     width: 100%;
     height: 20rem;
   }
+  #sow {
+    width: 100%;
+    height: 20rem;
+  }
 
   #rosendal {
+    width: 100%;
+    height: 41rem;
+    margin-bottom: 1rem;
+  }
+  #midsummer {
     width: 100%;
     height: 41rem;
     margin-bottom: 1rem;
@@ -518,7 +576,7 @@
   .case-wrapper--bottom {
     gap: 2%;
   }
-  #vi-som-älskar-90 {
+  #vi-som {
     width: 49%;
     height: 18rem;
     grid-row: 8/9;

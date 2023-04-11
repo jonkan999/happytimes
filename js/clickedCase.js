@@ -29,14 +29,20 @@ $(document).on("click", function (event) {
     // get the ID name of clicked element
     const idName = original.attr("id");
     $(".clone .project-image").remove();
-    $(".clone .carousel-placeholder").html(`
-    <div class="carousel">
-      <img src="/images/${idName}-main.jpg" alt="Image 1">
-      <img src="/images/nobelberget-2.jpg" alt="Image 2">
-      <img src="/images/nobelberget-3.jpg" alt="Image 3">
-    </div>
 
-    `);
+    //get info element conaining how many images to load
+    const numImages = clickedCard.dataset.numImages;
+
+    let images = "";
+    for (let i = 1; i <= numImages; i++) {
+      const src = `/images/${idName}/${idName}-${i}.jpg`;
+
+      images += `<img src="${src}" alt="Image ${i}">`;
+    }
+    console.log(images);
+    $(".clone .carousel-placeholder").html(
+      `<div class="carousel">${images}</div>`
+    );
 
     carousel();
 

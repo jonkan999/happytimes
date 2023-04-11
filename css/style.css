@@ -227,6 +227,11 @@ section {
   gap: 1rem;
   align-content: center;
   justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.case-wrapper--even-lower-4 {
+  gap: 3rem;
 }
 
 .case-wrapper--bottom {
@@ -259,7 +264,7 @@ section {
   height: 50rem;
 }
 
-#nobelmarknad {
+#nobelberget {
   width: 72.36rem;
   height: 50rem;
 }
@@ -280,7 +285,7 @@ section {
   grid-row: 5/8;
   grid-column: 1/-1;
 }
-#vi-som-älskar-90 {
+#vi-som {
   width: 60.3rem;
   height: 30rem;
   grid-row: 8/9;
@@ -291,6 +296,26 @@ section {
   height: 30rem;
   grid-row: 8/9;
   grid-column: 3/-1;
+}
+
+#sow {
+  width: 48.24rem;
+  height: 35rem;
+}
+
+#midsummer {
+  width: 48.24rem;
+  height: 66.5rem;
+}
+
+#hojden {
+  width: 72.36rem;
+  height: 50rem;
+}
+
+#popaganda {
+  width: 72.36rem;
+  height: 50rem;
 }
 
 .customer-case-card:not(.no-hover):hover {
