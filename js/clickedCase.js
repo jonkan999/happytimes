@@ -30,19 +30,44 @@ $(document).on("click", function (event) {
     const idName = original.attr("id");
     $(".clone .project-image").remove();
 
-    //get info element conaining how many images to load
+    //get info element containing how many images to load
     const numImages = clickedCard.dataset.numImages;
+    const placeholderSrc = "/images/placeholder.jpg"; // Add the path to your placeholder image
 
     let images = "";
     for (let i = 1; i <= numImages; i++) {
       const src = `/images/${idName}/${idName}-${i}.jpg`;
 
-      images += `<img src="${src}" alt="Image ${i}">`;
+      images += `<img class="lazy" data-src="${src}" src="${placeholderSrc}" alt="Image ${i}">`;
     }
-    console.log(images);
+
     $(".clone .carousel-placeholder").html(
       `<div class="carousel">${images}</div>`
     );
+
+    const loadImg = (image) => {
+      const src = image.getAttribute("data-src");
+      if (!src) return;
+      image.src = src;
+      image.removeAttribute("data-src");
+    };
+
+    const onIntersection = (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          loadImg(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(onIntersection, {
+      rootMargin: "0px 100px 0px 100px", // Adjust this value to load images before they are visible
+    });
+
+    document.querySelectorAll(".lazy").forEach((img) => {
+      observer.observe(img);
+    });
 
     carousel();
 
