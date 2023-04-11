@@ -410,16 +410,16 @@
   }
 
   .customer-case-card.clicked {
-    width: 65rem !important;
-    height: 45rem !important;
+    width: 95vw !important;
+    max-height: 45rem !important;
   }
 
   .customer-case-card.clicked .carousel-placeholder {
     position: relative;
-    width: 65rem;
+    width: 95vw;
   }
   .carousel img {
-    max-width: 65rem;
+    max-width: 95vw;
     max-height: 45rem;
     object-fit: cover;
   }
