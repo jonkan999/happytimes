@@ -382,7 +382,7 @@ section {
   height: auto;
 }
 .customer-case-card.clicked .customer-case-titel-year-box {
-  width: 40rem;
+  width: 50%;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
