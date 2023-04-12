@@ -39,7 +39,7 @@ $(document).on("click", function (event) {
     for (let i = 1; i <= numImages; i++) {
       const src = `/images/${idName}/${idName}-${i}.jpg`;
 
-      images += `<img class="lazy hidden-image" data-src="${src}" src="${placeholderSrc}" alt="Image ${i}">`;
+      images += `<img class="lazy hidden-image unloaded-image" data-src="${src}" src="${placeholderSrc}" alt="Image ${i}">`;
     }
 
     $(".clone .carousel-placeholder").html(
@@ -52,6 +52,10 @@ $(document).on("click", function (event) {
       const src = image.getAttribute("data-src");
       if (!src) return;
       image.src = src;
+      image.onload = () => {
+        image.classList.remove("unloaded-image");
+        image.classList.add("loaded-image");
+      };
       image.removeAttribute("data-src");
     };
 
@@ -65,7 +69,7 @@ $(document).on("click", function (event) {
     };
 
     const observer = new IntersectionObserver(onIntersection, {
-      rootMargin: "0px 100px 0px 100px", // Adjust this value to load images before they are visible
+      rootMargin: "0px 0px 0px 0px", // Adjust this value to load images before they are visible
     });
 
     document.querySelectorAll(".lazy").forEach((img) => {
@@ -90,46 +94,4 @@ $(document).on("click", function (event) {
   } else {
     // Do nothing
   }
-});
-
-$(document).ready(function () {
-  $(".customer-case-card").each(function () {
-    const idName = $(this).attr("id");
-    const numImages = $(this).data("numImages");
-    const placeholderSrc = "/images/placeholder.jpg";
-
-    let images = "";
-    for (let i = 1; i <= 1; i++) {
-      const src = `/images/${idName}/${idName}-${i}.jpg`;
-      images += `<img class="lazy hidden-image" data-src="${src}" src="${placeholderSrc}" alt="Image ${i}">`;
-    }
-
-    $(this).append(`<div class="preload-images">${images}</div>`);
-  });
-});
-
-$(document).ready(function () {
-  const loadImg = (image) => {
-    const src = image.getAttribute("data-src");
-    if (!src) return;
-    image.src = src;
-    image.removeAttribute("data-src");
-  };
-
-  const onIntersection = (entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        loadImg(entry.target);
-        observer.unobserve(entry.target);
-      }
-    });
-  };
-
-  const observer = new IntersectionObserver(onIntersection, {
-    rootMargin: "0px 100px 0px 100px",
-  });
-
-  document.querySelectorAll(".lazy").forEach((img) => {
-    observer.observe(img);
-  });
 });
