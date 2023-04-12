@@ -38,12 +38,14 @@ $(document).on("click", function (event) {
     for (let i = 1; i <= numImages; i++) {
       const src = `/images/${idName}/${idName}-${i}.jpg`;
 
-      images += `<img class="lazy" data-src="${src}" src="${placeholderSrc}" alt="Image ${i}">`;
+      images += `<img class="lazy hidden-image" data-src="${src}" src="${placeholderSrc}" alt="Image ${i}">`;
     }
 
     $(".clone .carousel-placeholder").html(
       `<div class="carousel">${images}</div>`
     );
+
+    $(".clone .hidden-image").removeClass("hidden-image").css("z-index", "10");
 
     const loadImg = (image) => {
       const src = image.getAttribute("data-src");
