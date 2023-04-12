@@ -29,6 +29,7 @@ $(document).on("click", function (event) {
     // get the ID name of clicked element
     const idName = original.attr("id");
     $(".clone .project-image").remove();
+    $(".clone .preload-images").remove();
 
     //get info element containing how many images to load
     const numImages = clickedCard.dataset.numImages;
@@ -89,4 +90,46 @@ $(document).on("click", function (event) {
   } else {
     // Do nothing
   }
+});
+
+$(document).ready(function () {
+  $(".customer-case-card").each(function () {
+    const idName = $(this).attr("id");
+    const numImages = $(this).data("numImages");
+    const placeholderSrc = "/images/placeholder.jpg";
+
+    let images = "";
+    for (let i = 1; i <= 1; i++) {
+      const src = `/images/${idName}/${idName}-${i}.jpg`;
+      images += `<img class="lazy hidden-image" data-src="${src}" src="${placeholderSrc}" alt="Image ${i}">`;
+    }
+
+    $(this).append(`<div class="preload-images">${images}</div>`);
+  });
+});
+
+$(document).ready(function () {
+  const loadImg = (image) => {
+    const src = image.getAttribute("data-src");
+    if (!src) return;
+    image.src = src;
+    image.removeAttribute("data-src");
+  };
+
+  const onIntersection = (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        loadImg(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(onIntersection, {
+    rootMargin: "0px 100px 0px 100px",
+  });
+
+  document.querySelectorAll(".lazy").forEach((img) => {
+    observer.observe(img);
+  });
 });
