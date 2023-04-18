@@ -51,6 +51,7 @@ $(document).on("click", function (event) {
     const loadImg = (image) => {
       const src = image.getAttribute("data-src");
       if (!src) return;
+      console.log("loading: " + src);
       image.src = src;
       image.onload = () => {
         image.classList.remove("unloaded-image");
@@ -69,7 +70,7 @@ $(document).on("click", function (event) {
     };
 
     const observer = new IntersectionObserver(onIntersection, {
-      rootMargin: "0px 0px 0px 0px", // Adjust this value to load images before they are visible
+      rootMargin: "0px 100px 0px 100px", // Adjust this value to load images before they are visible
     });
 
     document.querySelectorAll(".lazy").forEach((img) => {

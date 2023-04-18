@@ -129,16 +129,16 @@ header {
   /* font-family: "Cutive Mono", cursive; */
   /* text-transform: uppercase; */
   font-size: 8rem;
-  color: #333;
+  color: var(--highlight-color);
   font-weight: 700;
 }
 
 .bottom {
   position: absolute;
   inset: auto 0 0;
-  bottom: 8%;
+  top: 55%;
   padding: 2rem;
-  left: 46%;
+  left: 12%;
 }
 .foreground-image {
   position: absolute;

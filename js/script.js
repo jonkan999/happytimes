@@ -8,7 +8,7 @@ window.addEventListener("scroll", function () {
   /* console.log(-15 + offset * 0.115); */
   if (window.matchMedia("(max-width: 944px)").matches) {
     console.log("Media query matched on load!");
-    parallax.style.backgroundPositionY = 0 + offset * 0.115 + "vh";
+    parallax.style.backgroundPositionY = -15 + offset * 0.115 + "vh";
   } else {
     parallax.style.backgroundPositionY = -15 + offset * 0.115 + "vh";
   }
@@ -27,15 +27,15 @@ window.addEventListener("scroll", function () {
   const borderRect = border.getBoundingClientRect();
   const headerRect = header.getBoundingClientRect();
   const headerBottomRect = headerBottom.getBoundingClientRect();
-  const imageRect = image.getBoundingClientRect();
+  /* const imageRect = image.getBoundingClientRect(); */
 
   // Check if the border is overlapping with the header, headerBottom, or image
   if (
     (borderRect.bottom > headerRect.top &&
       borderRect.top < headerRect.bottom) ||
     (borderRect.bottom > headerBottomRect.top &&
-      borderRect.top < headerBottomRect.bottom) ||
-    (borderRect.bottom > imageRect.top && borderRect.top < imageRect.bottom)
+      borderRect.top < headerBottomRect.bottom) /*||
+    (borderRect.bottom > imageRect.top && borderRect.top < imageRect.bottom) */
   ) {
     // Calculate the amount of overlap for the header, headerBottom, and image
     const headerOverlap =
@@ -44,9 +44,9 @@ window.addEventListener("scroll", function () {
     const headerBottomOverlap =
       Math.min(borderRect.bottom, headerBottomRect.bottom) -
       Math.max(borderRect.top, headerBottomRect.top);
-    const imageOverlap =
+    /*    const imageOverlap =
       Math.min(borderRect.bottom, imageRect.bottom) -
-      Math.max(borderRect.top, imageRect.top);
+      Math.max(borderRect.top, imageRect.top); */
 
     // Check if the overlap is less than the height of the element
     if (headerOverlap < headerRect.height) {
@@ -87,19 +87,9 @@ window.addEventListener("scroll", function () {
       /*  border.style.backgroundImage = 'url("../background.jpg")'; */
       console.log("close");
     }
-
-    if (imageOverlap < imageRect.height) {
-      // Calculate the distance from the top of the image to the bottom of the border
-      const distance = borderRect.bottom - imageRect.top;
-
-      // Set the clip-path property to hide the part of the image behind the border
-      /* image.style.clipPath = `inset(${distance}px 0 0 0)`; */
-    }
   } else {
     // Reset the clip-path property if there is no overlap
 
     header.style.clipPath = "initial";
-
-    image.style.clipPath = "initial";
   }
 });

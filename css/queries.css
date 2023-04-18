@@ -171,6 +171,12 @@
     /* 9px / 16px  */
     font-size: 56.25%;
   }
+  .bottom {
+    top: 40%;
+    left: 55%;
+    transform: translate(-50%, 0);
+    width: 70vw;
+  }
 
   .header-container {
     max-width: 100%;
@@ -465,7 +471,6 @@
     width: 35rem;
   }
   .main-header {
-    left: 40%;
     font-size: 5rem;
   }
   .secondary-header {
@@ -477,13 +482,22 @@
 /* BELOW 430px ( new Phones) */
 /**************************/
 @media (max-width: 29em) {
-  .main-header {
+  .bottom {
+    top: 50%;
+    left: 100%;
+    transform: translate(-100%, 0);
+    font-size: 4.3rem;
+
+    letter-spacing: -0.18rem;
+  }
+
+  /*   .main-header {
     left: 33%;
     font-size: 4.3rem;
     bottom: 17%;
     letter-spacing: -0.18rem;
     padding: 2rem 0.5rem 2rem 2rem;
-  }
+  } */
 
   .container {
     max-width: 57.33rem;
