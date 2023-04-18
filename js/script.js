@@ -8,7 +8,7 @@ window.addEventListener("scroll", function () {
   /* console.log(-15 + offset * 0.115); */
   if (window.matchMedia("(max-width: 944px)").matches) {
     console.log("Media query matched on load!");
-    parallax.style.backgroundPositionY = -15 + offset * 0.115 + "vh";
+    parallax.style.backgroundPositionY = 0 + offset * 0.115 + "vh";
   } else {
     parallax.style.backgroundPositionY = -15 + offset * 0.115 + "vh";
   }
