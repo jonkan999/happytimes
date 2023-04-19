@@ -20,7 +20,7 @@ header {
   position: absolute;
   height: 100vh;
   width: 100%;
-  background-image: url(../background.jpg);
+  background-image: url(../background.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y: -15vh;
@@ -121,15 +121,11 @@ header {
   box-shadow: 0 4px 4px -4px rgb(0 0 0 / 60%);
   opacity: 0;
 }
-.double-line-bottom {
-  /*   border-bottom: 0.3rem solid var(--highlight-color);
-  box-shadow: 0 4px 4px -4px rgb(0 0 0 / 20%); */
-}
 .main-header {
   /* font-family: "Cutive Mono", cursive; */
   /* text-transform: uppercase; */
   font-size: 8rem;
-  color: var(--main-text-color) /* var(--highlight-color); */
+  color: var(--main-text-color); /* var(--highlight-color); */
   font-weight: 700;
 }
 
